@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Milton Roy Dosing Pump Inquiry</title>
+
+<title>Water Innovation Pump Inquiry</title>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
 <style>
 
 body{
-font-family: Arial, sans-serif;
-background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+font-family:Segoe UI;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 margin:0;
 display:flex;
 justify-content:center;
@@ -17,10 +21,10 @@ align-items:center;
 height:100vh;
 }
 
-.form-container{
+.form-box{
 background:white;
 padding:30px;
-width:420px;
+width:450px;
 border-radius:12px;
 box-shadow:0 15px 40px rgba(0,0,0,0.4);
 }
@@ -28,19 +32,17 @@ box-shadow:0 15px 40px rgba(0,0,0,0.4);
 h2{
 text-align:center;
 color:#203a43;
-margin-bottom:20px;
 }
 
 label{
-font-weight:bold;
 font-size:14px;
+font-weight:bold;
 }
 
-input, select{
+input,select{
 width:100%;
 padding:10px;
-margin-top:5px;
-margin-bottom:15px;
+margin:6px 0 15px 0;
 border-radius:6px;
 border:1px solid #ccc;
 }
@@ -52,40 +54,52 @@ background:#203a43;
 color:white;
 border:none;
 border-radius:6px;
-font-size:16px;
 cursor:pointer;
+font-size:16px;
 }
 
 button:hover{
 background:#162a31;
 }
 
+.success{
+color:green;
+text-align:center;
+margin-top:10px;
+}
+
+.error{
+color:red;
+text-align:center;
+margin-top:10px;
+}
+
 </style>
+
 </head>
 
 <body>
 
-<div class="form-container">
+<div class="form-box">
 
-<h2>Milton Roy Pump Inquiry</h2>
+<h2>Milton Roy Pump Enquiry</h2>
 
-<form onsubmit="sendMail(); return false;">
+<form id="pumpForm">
 
 <label>Company Name</label>
-<input type="text" id="company" required>
+<input type="text" name="company" required>
 
 <label>Contact Person</label>
-<input type="text" id="person" required>
+<input type="text" name="person" required>
 
 <label>Email</label>
-<input type="email" id="email" required>
+<input type="email" name="email" required>
 
 <label>Phone Number</label>
-<input type="tel" id="phone" required>
+<input type="text" name="phone">
 
-<label>Milton Roy Pump Model</label>
-<select id="model">
-<option value="">Select Model</option>
+<label>Pump Model</label>
+<select name="model">
 <option>Proteus Series</option>
 <option>MROY Series</option>
 <option>Milroyal Series</option>
@@ -94,50 +108,58 @@ background:#162a31;
 <option>MAXROY Series</option>
 </select>
 
-<label>Required Flow Rate (LPH)</label>
-<input type="text" id="flow">
+<label>Flow Rate (LPH)</label>
+<input type="text" name="flow">
 
-<label>Required Pressure (Bar)</label>
-<input type="text" id="pressure">
+<label>Pressure (Bar)</label>
+<input type="text" name="pressure">
 
-<label>Chemical Used for Dosing</label>
-<input type="text" id="chemical">
+<label>Chemical Used</label>
+<input type="text" name="chemical">
 
 <button type="submit">Send Inquiry</button>
 
 </form>
 
+<div id="status"></div>
+
 </div>
 
 <script>
 
-function sendMail(){
+// Initialize EmailJS
+(function(){
+emailjs.init("YOUR_PUBLIC_KEY");
+})();
 
-var company=document.getElementById("company").value;
-var person=document.getElementById("person").value;
-var email=document.getElementById("email").value;
-var phone=document.getElementById("phone").value;
-var model=document.getElementById("model").value;
-var flow=document.getElementById("flow").value;
-var pressure=document.getElementById("pressure").value;
-var chemical=document.getElementById("chemical").value;
+document.getElementById("pumpForm")
+.addEventListener("submit", function(event){
 
-var subject="Milton Roy Dosing Pump Inquiry";
+event.preventDefault();
 
-var body=
-"Company Name: "+company+"%0D%0A"+
-"Contact Person: "+person+"%0D%0A"+
-"Email: "+email+"%0D%0A"+
-"Phone: "+phone+"%0D%0A"+
-"Pump Model: "+model+"%0D%0A"+
-"Flow Rate: "+flow+" LPH%0D%0A"+
-"Pressure: "+pressure+" Bar%0D%0A"+
-"Chemical Used: "+chemical;
+emailjs.sendForm(
+"YOUR_SERVICE_ID",
+"YOUR_TEMPLATE_ID",
+this
+)
 
-window.location.href=
-"mailto:itsupport@waterinnovation.co.in?subject="+subject+"&body="+body;
+.then(function(){
 
-}
+document.getElementById("status").innerHTML =
+"<div class='success'>Inquiry sent successfully!</div>";
+
+document.getElementById("pumpForm").reset();
+
+},
+
+function(){
+
+document.getElementById("status").innerHTML =
+"<div class='error'>Failed to send inquiry.</div>";
+
+});
+
+});
 
 </script>
 
