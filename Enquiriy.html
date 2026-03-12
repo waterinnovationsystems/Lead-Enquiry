@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Milton Roy Dosing Pump Inquiry</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+margin:0;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.form-container{
+background:white;
+padding:30px;
+width:420px;
+border-radius:12px;
+box-shadow:0 15px 40px rgba(0,0,0,0.4);
+}
+
+h2{
+text-align:center;
+color:#203a43;
+margin-bottom:20px;
+}
+
+label{
+font-weight:bold;
+font-size:14px;
+}
+
+input, select{
+width:100%;
+padding:10px;
+margin-top:5px;
+margin-bottom:15px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+button{
+width:100%;
+padding:12px;
+background:#203a43;
+color:white;
+border:none;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#162a31;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="form-container">
+
+<h2>Milton Roy Pump Inquiry</h2>
+
+<form onsubmit="sendMail(); return false;">
+
+<label>Company Name</label>
+<input type="text" id="company" required>
+
+<label>Contact Person</label>
+<input type="text" id="person" required>
+
+<label>Email</label>
+<input type="email" id="email" required>
+
+<label>Phone Number</label>
+<input type="tel" id="phone" required>
+
+<label>Milton Roy Pump Model</label>
+<select id="model">
+<option value="">Select Model</option>
+<option>Proteus Series</option>
+<option>MROY Series</option>
+<option>Milroyal Series</option>
+<option>PN Series Packed Plunger</option>
+<option>PRIMEROYAL Series</option>
+<option>MAXROY Series</option>
+</select>
+
+<label>Required Flow Rate (LPH)</label>
+<input type="text" id="flow">
+
+<label>Required Pressure (Bar)</label>
+<input type="text" id="pressure">
+
+<label>Chemical Used for Dosing</label>
+<input type="text" id="chemical">
+
+<button type="submit">Send Inquiry</button>
+
+</form>
+
+</div>
+
+<script>
+
+function sendMail(){
+
+var company=document.getElementById("company").value;
+var person=document.getElementById("person").value;
+var email=document.getElementById("email").value;
+var phone=document.getElementById("phone").value;
+var model=document.getElementById("model").value;
+var flow=document.getElementById("flow").value;
+var pressure=document.getElementById("pressure").value;
+var chemical=document.getElementById("chemical").value;
+
+var subject="Milton Roy Dosing Pump Inquiry";
+
+var body=
+"Company Name: "+company+"%0D%0A"+
+"Contact Person: "+person+"%0D%0A"+
+"Email: "+email+"%0D%0A"+
+"Phone: "+phone+"%0D%0A"+
+"Pump Model: "+model+"%0D%0A"+
+"Flow Rate: "+flow+" LPH%0D%0A"+
+"Pressure: "+pressure+" Bar%0D%0A"+
+"Chemical Used: "+chemical;
+
+window.location.href=
+"mailto:itsupport@waterinnovation.co.in?subject="+subject+"&body="+body;
+
+}
+
+</script>
+
+</body>
+</html>
