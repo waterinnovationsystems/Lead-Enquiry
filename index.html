@@ -5,7 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Lead Generation Landing Page</title>
+<title>Milton Roy Dosing Pumps Enquiry</title>
+
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -19,333 +20,371 @@ font-family:Poppins,sans-serif;
 }
 
 body{
-background:#f5f7fb;
-color:#333;
-line-height:1.6;
+background:#f5f7fa;
 }
 
-/* HERO */
+/* HERO SECTION */
 
 .hero{
-height:90vh;
-background:linear-gradient(rgba(40,70,150,.8),rgba(40,70,150,.8)),
-url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f');
+
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url("https://www.linkedin.com/company/milton-roy");
+
 background-size:cover;
 background-position:center;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:60px 8%;
+
 color:white;
-flex-wrap:wrap;
+text-align:center;
+padding:100px 20px;
+
 }
 
-.hero-text{
-max-width:500px;
-}
-
-.hero-text h1{
+.hero h1{
 font-size:42px;
-margin-bottom:20px;
-}
-
-.hero-text p{
-opacity:.9;
-}
-
-/* FORM */
-
-.lead-form{
-background:white;
-padding:30px;
-border-radius:10px;
-width:320px;
-box-shadow:0 10px 25px rgba(0,0,0,.2);
-animation:fadeUp 1s;
-}
-
-.lead-form input{
-width:100%;
-padding:12px;
-margin:10px 0;
-border:1px solid #ddd;
-border-radius:6px;
-}
-
-.lead-form button{
-width:100%;
-padding:12px;
-background:#4267ff;
-border:none;
-color:white;
-font-weight:bold;
-border-radius:6px;
-cursor:pointer;
-transition:.3s;
-}
-
-.lead-form button:hover{
-background:#2c4bdc;
-}
-
-/* FEATURES */
-
-.features{
-padding:80px 10%;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:40px;
-}
-
-.feature{
-background:white;
-padding:30px;
-border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-transition:.3s;
-}
-
-.feature:hover{
-transform:translateY(-8px);
-}
-
-.feature h3{
 margin-bottom:10px;
 }
 
-/* VIDEO */
-
-.video-section{
-padding:80px 10%;
-display:flex;
-flex-wrap:wrap;
-align-items:center;
-gap:40px;
+.hero p{
+font-size:18px;
+opacity:.9;
 }
 
-.video-section iframe{
-width:500px;
-max-width:100%;
-border-radius:10px;
+/* CONTAINER */
+
+.container{
+width:90%;
+max-width:900px;
+margin:auto;
+margin-top:-60px;
 }
 
-.video-text{
-max-width:500px;
+/* FORM BOX */
+
+.form-box{
+
+background:white;
+padding:40px;
+border-radius:12px;
+
+box-shadow:0 15px 40px rgba(0,0,0,0.2);
+
 }
 
-/* TESTIMONIAL */
-
-.testimonial{
-padding:80px 20px;
+.form-box h2{
 text-align:center;
-background:#f1f3f8;
+margin-bottom:25px;
+color:#1f6f69;
 }
 
-.testimonial img{
-width:70px;
-border-radius:50%;
-margin:20px 0;
+/* FORM INPUT */
+
+.form-group{
+margin-bottom:16px;
 }
 
-/* CTA */
+input,select,textarea{
 
-.cta{
-background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-url('img/banner.jpg');
-background-size:cover;
-background-position:center;
-padding:100px 20px;
-text-align:center;
-color:white;
-}
-
-.cta h2{
-font-size:36px;
-margin-bottom:20px;
-}
-
-.cta button{
-padding:14px 40px;
-border:none;
-background:#4267ff;
-color:white;
-font-size:16px;
+width:100%;
+padding:12px;
+border:1px solid #ddd;
 border-radius:6px;
-cursor:pointer;
+font-size:14px;
+
 }
+
+textarea{
+height:80px;
+}
+
+/* BUTTON */
+
+button{
+
+width:100%;
+padding:15px;
+
+background:linear-gradient(45deg,#2a8f87,#4bb3a7);
+
+color:white;
+
+border:none;
+
+border-radius:6px;
+
+font-size:16px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+transform:scale(1.03);
+}
+
+/* FEATURE SECTION */
+
+.features{
+
+padding:70px 10%;
+text-align:center;
+
+}
+
+.features h2{
+margin-bottom:40px;
+}
+
+.grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+
+}
+
+.feature{
+
+background:white;
+
+padding:25px;
+
+border-radius:10px;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+}
+
 
 /* WHATSAPP BUTTON */
 
 .whatsapp{
+
 position:fixed;
 bottom:20px;
 right:20px;
+
 background:#25D366;
+
 width:60px;
 height:60px;
+
 border-radius:50%;
+
 display:flex;
 align-items:center;
 justify-content:center;
+
 font-size:30px;
 color:white;
-text-decoration:none;
-box-shadow:0 8px 20px rgba(0,0,0,.3);
-transition:.3s;
-}
 
-.whatsapp:hover{
-transform:scale(1.1);
+text-decoration:none;
+
+box-shadow:0 8px 20px rgba(0,0,0,.3);
+
 }
 
 /* FOOTER */
 
-footer{
-text-align:center;
-padding:20px;
+.footer{
+
 background:#111;
-color:#bbb;
-}
+color:#aaa;
+text-align:center;
 
-/* ANIMATION */
+padding:20px;
+margin-top:50px;
 
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
 }
 
 </style>
+
 </head>
 
 <body>
 
 <!-- HERO -->
 
-<section class="hero">
+<div class="hero">
 
-<div class="hero-text">
+<h1>Milton Roy Dosing Pumps</h1>
 
-<h1>We Help Businesses Grow Online</h1>
-
-<p>Generate more leads, increase sales, and connect with your customers using our powerful digital solutions.</p>
+<p>Industrial Chemical Dosing Solutions for RO Plants, Water Treatment and Pharmaceutical Industries</p>
 
 </div>
 
-<div class="lead-form">
 
-<h3>Get Free Consultation</h3>
+<!-- FORM -->
 
-<input type="text" placeholder="Your Name">
+<div class="container">
 
-<input type="email" placeholder="Email">
+<div class="form-box">
 
-<input type="tel" placeholder="Phone Number">
+<h2>Request Pump Enquiry</h2>
 
-<button>SUBSCRIBE NOW</button>
+<form>
+
+<div class="form-group">
+<input type="text" id="name" placeholder="Name" required>
+</div>
+
+<div class="form-group">
+<input type="text" id="company" placeholder="Company Name">
+</div>
+
+<div class="form-group">
+<input type="tel" id="phone" placeholder="Contact Number" required>
+</div>
+
+<div class="form-group">
+<input type="email" id="email" placeholder="Email ID">
+</div>
+
+<div class="form-group">
+<input type="text" id="gst" placeholder="Company GST">
+</div>
+
+<div class="form-group">
+<input type="text" id="chemical" placeholder="Chemical Used For Dosing">
+</div>
+
+<div class="form-group">
+
+<select id="pump">
+
+<option>MAD Series</option>
+<option>HAD Series</option>
+<option>EMAG Series</option>
+<option>UC-11</option>
+<option>UC-12</option>
+<option>GB Series</option>
+<option>M Series</option>
+<option>Roytronic Series</option>
+<option>PNP Series</option>
+<option>PNK Series</option>
+<option>PNM Series</option>
+<option>PN Series</option>
+<option>PNZ Series</option>
+
+</select>
 
 </div>
 
-</section>
+<div class="form-group">
+<input type="text" id="submodel" placeholder="Sub Model (Example MAD-150)">
+</div>
+
+<div class="form-group">
+
+<select id="application">
+
+<option>Chemical Dosing</option>
+<option>RO Plant</option>
+<option>Water Treatment</option>
+<option>Pharmaceutical</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+<textarea id="requirement" placeholder="Flow Rate, Pressure, Accessories Required"></textarea>
+</div>
+
+<button type="button" onclick="sendWhatsApp()">Submit Enquiry</button>
+
+</form>
+
+</div>
+
+</div>
+
 
 <!-- FEATURES -->
 
 <section class="features">
 
+<h2>Why Choose Milton Roy Pumps</h2>
+
+<div class="grid">
+
 <div class="feature">
-<h3>Better Analytics</h3>
-<p>Understand your users and optimize conversions using powerful insights.</p>
+<h3>High Accuracy</h3>
+<p>Precise chemical dosing suitable for critical industrial applications.</p>
 </div>
 
 <div class="feature">
-<h3>Better Design</h3>
-<p>Beautiful and responsive website designs for modern businesses.</p>
+<h3>Industrial Reliability</h3>
+<p>Designed for heavy duty operation in water treatment and chemical plants.</p>
 </div>
 
 <div class="feature">
-<h3>Customer Growth</h3>
-<p>Turn visitors into loyal customers with optimized funnels.</p>
+<h3>Wide Model Range</h3>
+<p>Available in MAD, PNZ, Roytronic, PNP, and other series.</p>
 </div>
-
-<div class="feature">
-<h3>Marketing Tools</h3>
-<p>Boost marketing campaigns with automation and analytics.</p>
-</div>
-
-</section>
-
-<!-- VIDEO -->
-
-<section class="video-section">
-
-<iframe src="https://www.youtube.com/embed/ysz5S6PUM-U"></iframe>
-
-<div class="video-text">
-
-<h2>Watch Our Platform in Action</h2>
-
-<p>See how our platform helps businesses capture leads, automate marketing, and increase revenue.</p>
-
-<ul>
-<li>✔ Lead automation</li>
-<li>✔ Marketing insights</li>
-<li>✔ Conversion optimization</li>
-</ul>
 
 </div>
 
 </section>
 
-<!-- TESTIMONIAL -->
 
-<section class="testimonial">
-
-<p>"This platform helped us generate more leads and grow faster than ever."</p>
-
-<img src="https://randomuser.me/api/portraits/women/44.jpg">
-
-<h4>Jolya Smith</h4>
-
-<p>Marketing Director</p>
-
-</section>
-
-<!-- CTA -->
-
-<section class="cta">
-
-<h2>Ready to Grow Your Business?</h2>
-
-<p>Start generating leads and customers today.</p>
-
-<br>
-
-<button>CALL TO ACTION</button>
-
-</section>
-
-<!-- WHATSAPP -->
+<!-- WHATSAPP FLOAT BUTTON -->
 
 <a class="whatsapp"
-href="https://wa.me/919999999999"
+href="https://wa.me/918951924004"
 target="_blank">
 
 💬
 
 </a>
 
-<!-- FOOTER -->
 
-<footer>
+<!-- JAVASCRIPT -->
 
-© 2026 Lead Landing Page
+<script>
 
-</footer>
+function sendWhatsApp(){
+
+let name = document.getElementById("name").value;
+let company = document.getElementById("company").value;
+let phone = document.getElementById("phone").value;
+let email = document.getElementById("email").value;
+let gst = document.getElementById("gst").value;
+let pump = document.getElementById("pump").value;
+let submodel = document.getElementById("submodel").value;
+let chemical = document.getElementById("chemical").value;
+let application = document.getElementById("application").value;
+let requirement = document.getElementById("requirement").value;
+
+let message =
+"Milton Roy Pump Enquiry%0A%0A" +
+"Name: " + name + "%0A" +
+"Company: " + company + "%0A" +
+"Phone: " + phone + "%0A" +
+"Email: " + email + "%0A" +
+"GST: " + gst + "%0A" +
+"Pump Model: " + pump + "%0A" +
+"Sub Model: " + submodel + "%0A" +
+"Chemical Used: " + chemical + "%0A" +
+"Application: " + application + "%0A" +
+"Requirement: " + requirement;
+
+let url = "https://wa.me/918951924004?text=" + message;
+
+window.open(url,'_blank');
+
+}
+
+</script>
+
+
+<div class="footer">
+
+© 2026 Milton Roy Pump Solutions
+
+</div>
 
 </body>
 </html>
